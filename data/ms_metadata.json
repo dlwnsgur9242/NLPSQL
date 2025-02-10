@@ -1,0 +1,4665 @@
+{
+    "get_kpx": {
+        "columns": [
+            {
+                "name": "did",
+                "type": "NVARCHAR(50) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "timestamp",
+                "type": "BIGINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "localtime",
+                "type": "BIGINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "operation",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "alertLevel",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "faultDesc",
+                "type": "NVARCHAR(50) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "activePower",
+                "type": "DECIMAL(10, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "reactivePower",
+                "type": "DECIMAL(10, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "maxActivePower",
+                "type": "DECIMAL(10, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "targetActivePower",
+                "type": "DECIMAL(10, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "essCActivePower",
+                "type": "DECIMAL(10, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "essDActivePower",
+                "type": "DECIMAL(10, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "essReactivePower",
+                "type": "DECIMAL(10, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "essMaxActivePower",
+                "type": "DECIMAL(10, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "essMinActivePower",
+                "type": "DECIMAL(10, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "essSoc",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "irradiation",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "temperature",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "windDirection",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "windSpeed",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "numOperatingTurbine",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "lastTargetActivePowerRecvDate",
+                "type": "BIGINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "lastTargetActivePowerReqDate",
+                "type": "BIGINT",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": []
+    },
+    "post_kpx": {
+        "columns": [
+            {
+                "name": "did",
+                "type": "NVARCHAR(50) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "targetPower",
+                "type": "DECIMAL(10, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "requestAt",
+                "type": "BIGINT",
+                "nullable": false,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "did",
+            "requestAt"
+        ]
+    },
+    "post_kpx_control": {
+        "columns": [
+            {
+                "name": "did",
+                "type": "NVARCHAR(50) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "requestAt",
+                "type": "BIGINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "controlMode",
+                "type": "NVARCHAR(5) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "targetPower",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "value",
+                "type": "NVARCHAR(50) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "did",
+            "requestAt"
+        ]
+    },
+    "tc_device_list": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_code",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "user_group",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "port_name",
+                "type": "NVARCHAR(6) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "device_address",
+                "type": "NVARCHAR(30) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "baudrate",
+                "type": "INTEGER",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "parity",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "channel",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "stack",
+                "type": "NVARCHAR(10) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "description",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "Interval",
+                "type": "SMALLINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "group_device",
+                "type": "NVARCHAR(6) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "ip_address",
+                "type": "NVARCHAR(30) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "tcp_port",
+                "type": "INTEGER",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "kwp",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "kwh_chk",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "test_use",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "alm_push",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "rtu_gnb",
+                "type": "SMALLINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "cb_idx",
+                "type": "SMALLINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "iv_idx",
+                "type": "SMALLINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "singleline_group",
+                "type": "NVARCHAR(10) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "singleline_main",
+                "type": "NVARCHAR(10) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "wt_main",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "wt_use",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "wt_type",
+                "type": "NVARCHAR(6) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "todayYN",
+                "type": "NVARCHAR(2) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "g_amp_use",
+                "type": "NVARCHAR(2) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "imd_use",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "cb_use",
+                "type": "NVARCHAR(2) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "fail_count",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_no",
+            "port_name",
+            "device_address"
+        ]
+    },
+    "tc_device_RTU": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_code",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "user_group",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "port_name",
+                "type": "NVARCHAR(6) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "device_address",
+                "type": "NVARCHAR(3) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "baudrate",
+                "type": "INTEGER",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "parity",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "channel",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "stack",
+                "type": "NVARCHAR(10) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "description",
+                "type": "NVARCHAR(10) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "Interval",
+                "type": "SMALLINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "group_device",
+                "type": "NVARCHAR(2) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "ip_address",
+                "type": "NVARCHAR(30) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "tcp_port",
+                "type": "SMALLINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "kwp",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "addYN",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "test_use",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "alm_push",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "data_len",
+                "type": "SMALLINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "fail_count",
+                "type": "INTEGER",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_no",
+            "port_name",
+            "device_address"
+        ]
+    },
+    "tc_weather_list": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "ch_no",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "item_code",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "device_address",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "ip_address",
+                "type": "NVARCHAR(30) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "tcp_port",
+                "type": "INTEGER",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "adc_port",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "radiation_maxrange",
+                "type": "SMALLINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "idx",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_no",
+            "idx"
+        ]
+    },
+    "th_connectbox": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "create_date",
+                "type": "SMALLDATETIME",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "v_total",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a_total",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a01",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a02",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a03",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a04",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a05",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a06",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a07",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a08",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a09",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a10",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a11",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a12",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a13",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a14",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a15",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a16",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a17",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a18",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a19",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a20",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a21",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a22",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a23",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a24",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a25",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a26",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a27",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a28",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "in_temp",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status0",
+                "type": "NVARCHAR(2) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status1",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status2",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status3",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_no",
+            "create_date"
+        ]
+    },
+    "th_connectbox_day": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "dt",
+                "type": "NVARCHAR(10) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "dt_hour",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "v_total",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a_total",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a01",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a02",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a03",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a04",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a05",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a06",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a07",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a08",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a09",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a10",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a11",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a12",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a13",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a14",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a15",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a16",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a17",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a18",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a19",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a20",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a21",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a22",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a23",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a24",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a25",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a26",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a27",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a28",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "in_temp",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_no",
+            "dt",
+            "dt_hour"
+        ]
+    },
+    "th_digitalmeter": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "create_date",
+                "type": "SMALLDATETIME",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "linevoltageR",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageS",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageT",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageRS",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageST",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageTR",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linecurrentR",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linecurrentS",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linecurrentT",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "kw",
+                "type": "DECIMAL(10, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "kwh",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "realkwh",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "todaykwh",
+                "type": "DECIMAL(10, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linehz",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linepf",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status0",
+                "type": "NVARCHAR(2) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status1",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status2",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status3",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_no",
+            "create_date"
+        ]
+    },
+    "th_digitalmeter_day": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "dt",
+                "type": "NVARCHAR(10) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "dt_hour",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "linevoltageR",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageS",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageT",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageRS",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageST",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageTR",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linecurrentR",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linecurrentS",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linecurrentT",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "kw",
+                "type": "DECIMAL(10, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "akwh",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "kwh",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "akwh_min",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linehz",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linepf",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_no",
+            "dt",
+            "dt_hour"
+        ]
+    },
+    "th_event": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "idx",
+                "type": "INTEGER",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "ch_no",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "cell_no",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "event_code",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "event_date",
+                "type": "DATETIME",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "end_date",
+                "type": "DATETIME",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "confirm_flag",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "confirm_date",
+                "type": "DATETIME",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "confirm_id",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "sms",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "email",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "sendedPush",
+                "type": "INTEGER",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "sendServer",
+                "type": "SMALLINT",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "idx"
+        ]
+    },
+    "th_inverter": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "create_date",
+                "type": "SMALLDATETIME",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "solarvoltage",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "solarcurrent",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "solarkw",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "kw",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "kwh",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "realkwh",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "todaykwh",
+                "type": "DECIMAL(10, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageRS",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageST",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageTR",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linecurrentR",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linecurrentS",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linecurrentT",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linehz",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linepf",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "iv_temp",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status0",
+                "type": "NVARCHAR(10) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "Status1",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "Status2",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "Status3",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_no",
+            "create_date"
+        ]
+    },
+    "th_inverter_day": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "dt",
+                "type": "NVARCHAR(10) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "dt_hour",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "solarvoltage",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "solarcurrent",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "solarkw",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "kw",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "akwh",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "kwh",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "akwh_min",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageRS",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageST",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageTR",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linecurrentR",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linecurrentS",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linecurrentT",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linehz",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linepf",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "iv_temp",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_no",
+            "dt",
+            "dt_hour"
+        ]
+    },
+    "th_inverter_day_2023": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "dt",
+                "type": "NVARCHAR(10) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "dt_hour",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "solarvoltage",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "solarcurrent",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "solarkw",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "kw",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "akwh",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "kwh",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "akwh_min",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageRS",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageST",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageTR",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linecurrentR",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linecurrentS",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linecurrentT",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linehz",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linepf",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "iv_temp",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": []
+    },
+    "th_kma_3hour_day": {
+        "columns": [
+            {
+                "name": "dt",
+                "type": "NVARCHAR(10) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "dt_hour",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "location_x",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "location_y",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "pop",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "pty",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "r06",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "reh",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "s06",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "sky",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "t3h",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "tmn",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "tmx",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "uuu",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "vvv",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "wav",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "vec",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "wsd",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "skyicon",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "dt",
+            "dt_hour",
+            "location_x",
+            "location_y"
+        ]
+    },
+    "th_smp_cont": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "dt_year",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "dt_month",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "kwh_equip",
+                "type": "REAL",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "kwh_user",
+                "type": "REAL",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "rec_kwh",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "last_kwh",
+                "type": "REAL",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "this_kwh",
+                "type": "REAL",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "last_kwh_input",
+                "type": "REAL",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "smp_profit",
+                "type": "DECIMAL(18, 0)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "rec_profit",
+                "type": "DECIMAL(18, 0)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "sr_profit",
+                "type": "DECIMAL(19, 0)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "equip_complete",
+                "type": "NCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "user_complete",
+                "type": "NCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "lic_idx",
+                "type": "INTEGER",
+                "nullable": false,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "dt_year",
+            "dt_month",
+            "lic_idx"
+        ]
+    },
+    "th_smp_random": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "dt_year",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "dt_month",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "kwh_equip",
+                "type": "REAL",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "kwh_user",
+                "type": "REAL",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "sr_profit",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "equip_complete",
+                "type": "NCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "lic_idx",
+                "type": "INTEGER",
+                "nullable": false,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "dt_year",
+            "dt_month",
+            "lic_idx"
+        ]
+    },
+    "th_smp_real": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "dt_year",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "dt_month",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "kwh_equip",
+                "type": "REAL",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "kwh_user",
+                "type": "REAL",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "rec_kwh",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "last_kwh",
+                "type": "REAL",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "this_kwh",
+                "type": "REAL",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "last_kwh_input",
+                "type": "REAL",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "smp_profit",
+                "type": "DECIMAL(18, 0)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "rec_profit",
+                "type": "DECIMAL(18, 0)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "sr_profit",
+                "type": "DECIMAL(19, 0)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "equip_complete",
+                "type": "NCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "user_complete",
+                "type": "NCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "real_price",
+                "type": "REAL",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "rec_accu",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "rec_sell",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "lic_idx",
+                "type": "INTEGER",
+                "nullable": false,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "dt_year",
+            "dt_month",
+            "lic_idx"
+        ]
+    },
+    "th_temp": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "create_date",
+                "type": "SMALLDATETIME",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "temp_rs",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "temp_st",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "temp_tr",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "temp_max",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status0",
+                "type": "NVARCHAR(2) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status1",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status2",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status3",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_no",
+            "create_date"
+        ]
+    },
+    "th_temp_day": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "dt",
+                "type": "NVARCHAR(10) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "dt_hour",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "temp_rs",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "temp_st",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "temp_tr",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "temp_max",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_no",
+            "dt",
+            "dt_hour"
+        ]
+    },
+    "th_weather": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "create_date",
+                "type": "SMALLDATETIME",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "s_radiation",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h_radiation",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "mod_temp",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "out_temp",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "wind_direction",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "wind_speed",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "rainfall",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "humidity",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "ma1",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "ma2",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "out_temp2",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status0",
+                "type": "NVARCHAR(2) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status1",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status2",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status3",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_no",
+            "create_date"
+        ]
+    },
+    "th_weather_day": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "dt",
+                "type": "NVARCHAR(10) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "dt_hour",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "s_radiation",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h_radiation",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "mod_temp",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "out_temp",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "wind_direction",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "wind_speed",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "rainfall",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "humidity",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "ma1",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "ma2",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "out_temp2",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_no",
+            "dt",
+            "dt_hour"
+        ]
+    },
+    "tm_board": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "idx",
+                "type": "INTEGER",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "create_date",
+                "type": "SMALLDATETIME",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "update_date",
+                "type": "SMALLDATETIME",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "title",
+                "type": "NVARCHAR(50) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "contents",
+                "type": "NVARCHAR(1024) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "file_name",
+                "type": "NVARCHAR(100) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "idx"
+        ]
+    },
+    "tm_control": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "IO_item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "IV_item_no",
+                "type": "SMALLINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "idx",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "IV_control",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "DM_control",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "gubun",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "on_use",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "fail_count",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "Info",
+                "type": "NVARCHAR(10) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "IO_item_no",
+            "item_no"
+        ]
+    },
+    "tm_control_history": {
+        "columns": [
+            {
+                "name": "idx",
+                "type": "INTEGER",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "create_date",
+                "type": "DATETIME",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "login_id",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "user_ip",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "idx",
+            "create_date"
+        ]
+    },
+    "tm_device": {
+        "columns": [
+            {
+                "name": "device_code",
+                "type": "CHAR(2) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "device_name",
+                "type": "VARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "device_code"
+        ]
+    },
+    "tm_device_item": {
+        "columns": [
+            {
+                "name": "item_code",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "device_code",
+                "type": "NVARCHAR(2) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "device_maker",
+                "type": "NVARCHAR(50) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "device_model",
+                "type": "NVARCHAR(50) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "item_code",
+            "device_code"
+        ]
+    },
+    "tm_event": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_code",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "event_code",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "event_desc",
+                "type": "NVARCHAR(200) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "event_type",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "event_grade",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "use_flag",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "sms_flag",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "email_flag",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_code",
+            "event_code"
+        ]
+    },
+    "tm_event_email": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "s_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_code",
+                "type": "VARCHAR(15) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "event_code",
+                "type": "VARCHAR(30) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "event_desc",
+                "type": "NVARCHAR(200) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "email_flag",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "sms_flag",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "s_id",
+            "item_code",
+            "event_code"
+        ]
+    },
+    "tm_kma_location": {
+        "columns": [
+            {
+                "name": "code",
+                "type": "BIGINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "parent_code",
+                "type": "INTEGER",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "location_name",
+                "type": "NVARCHAR(10) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "location_x",
+                "type": "SMALLINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "location_y",
+                "type": "SMALLINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "step",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "code",
+            "parent_code",
+            "step"
+        ]
+    },
+    "tm_panel": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "mp_item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "order",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "table",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "column",
+                "type": "NVARCHAR(50) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "round",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "mp_item_no",
+            "order"
+        ]
+    },
+    "tm_smp": {
+        "columns": [
+            {
+                "name": "create_date",
+                "type": "SMALLDATETIME",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "h1",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h2",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h3",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h4",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h5",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h6",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h7",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h8",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h9",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h10",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h11",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h12",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h13",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h14",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h15",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h16",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h17",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h18",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h19",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h20",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h21",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h22",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h23",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h24",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "avg_smp",
+                "type": "FLOAT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status",
+                "type": "VARCHAR(2) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "create_date"
+        ]
+    },
+    "tm_smp_hour": {
+        "columns": [
+            {
+                "name": "create_date",
+                "type": "SMALLDATETIME",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "h1",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h2",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h3",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h4",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h5",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h6",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h7",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h8",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h9",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h10",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h11",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h12",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h13",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h14",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h15",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h16",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h17",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h18",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h19",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h20",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h21",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h22",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h23",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h24",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "avg_smp",
+                "type": "FLOAT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status",
+                "type": "VARCHAR(2) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "create_date"
+        ]
+    },
+    "tm_smp_lic": {
+        "columns": [
+            {
+                "name": "idx",
+                "type": "INTEGER",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "business",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "rec_sdate",
+                "type": "NVARCHAR(10) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "rec_edate",
+                "type": "NVARCHAR(10) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "rec_weight",
+                "type": "REAL",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "price",
+                "type": "REAL",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "update_date",
+                "type": "SMALLDATETIME",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "idx"
+        ]
+    },
+    "tm_smp_month": {
+        "columns": [
+            {
+                "name": "dt",
+                "type": "DATE",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "smp_price",
+                "type": "REAL",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "status",
+                "type": "VARCHAR(2) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "dt"
+        ]
+    },
+    "tm_sms_config": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "id",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "pw",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "sender",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "remark",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "id"
+        ]
+    },
+    "tm_user": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "site_name",
+                "type": "NVARCHAR(30) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "kwp",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "addr",
+                "type": "NVARCHAR(100) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "inte_grade",
+                "type": "NVARCHAR(2) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "ip_addr",
+                "type": "NVARCHAR(15) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "url_addr",
+                "type": "NVARCHAR(30) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "u_id",
+                "type": "NVARCHAR(15) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "u_pass",
+                "type": "NVARCHAR(32) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "u_level",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "weather_city",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "cctv_use",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "cctv_url",
+                "type": "NVARCHAR(50) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "dvr_add",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "cctv_id",
+                "type": "NVARCHAR(15) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "cctv_pw",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "group_control",
+                "type": "NCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "profit_use",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "islocal",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "remark",
+                "type": "NVARCHAR(100) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "disp_kw",
+                "type": "NVARCHAR(3) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "pin_xy",
+                "type": "NVARCHAR(50) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "m_company",
+                "type": "NVARCHAR(10) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "manager_name",
+                "type": "NVARCHAR(10) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "manager_tel",
+                "type": "NVARCHAR(20) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "ddns",
+                "type": "NVARCHAR(30) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "rtu_port",
+                "type": "NVARCHAR(8) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "ap_port",
+                "type": "NVARCHAR(15) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "control",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "alarm_bell",
+                "type": "NVARCHAR(1) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "singleline_auto",
+                "type": "CHAR(2) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "u_id"
+        ]
+    },
+    "tm_user_sms": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "s_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "receive_phone",
+                "type": "NVARCHAR(50) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "name",
+                "type": "NVARCHAR(10) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "email",
+                "type": "NVARCHAR(30) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "s_id"
+        ]
+    },
+    "tr_connectbox": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "update_date",
+                "type": "DATETIME",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "v_total",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a_total",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a01",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a02",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a03",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a04",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a05",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a06",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a07",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a08",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a09",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a10",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a11",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a12",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a13",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a14",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a15",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a16",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a17",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a18",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a19",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a20",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a21",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a22",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a23",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a24",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a25",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a26",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a27",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "a28",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "in_temp",
+                "type": "DECIMAL(7, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "trip1",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "trip2",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status0",
+                "type": "NVARCHAR(2) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status1",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status2",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status3",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "fail_count",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "mccb",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "spd",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "fire",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_no",
+            "update_date"
+        ]
+    },
+    "tr_digitalmeter": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "update_date",
+                "type": "DATETIME",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "linevoltageR",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageS",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageT",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageRS",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageST",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageTR",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linecurrentR",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linecurrentS",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linecurrentT",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "kw",
+                "type": "DECIMAL(10, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "kwh",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "realkwh",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "todaykwh",
+                "type": "DECIMAL(10, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "lastkwh",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "prelastkwh",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linehz",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linepf",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "g_amp",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status0",
+                "type": "NVARCHAR(2) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status1",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status2",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status3",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "fail_count",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_no",
+            "update_date"
+        ]
+    },
+    "tr_inverter": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "update_date",
+                "type": "DATETIME",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "solarvoltage",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "solarcurrent",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "solarkw",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "kw",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "kwh",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "realkwh",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "todaykwh",
+                "type": "DECIMAL(10, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "real_todaykwh",
+                "type": "DECIMAL(10, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageRS",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageST",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linevoltageTR",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linecurrentR",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linecurrentS",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linecurrentT",
+                "type": "DECIMAL(8, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linehz",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "linepf",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "iv_temp",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "g_amp",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "pr",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status0",
+                "type": "NVARCHAR(2) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "Status1",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "Status2",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "Status3",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "fail_count",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_no",
+            "update_date"
+        ]
+    },
+    "tr_IO": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "update_date",
+                "type": "DATETIME",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "CT_value1",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "CT_value2",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "CT_value3",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "CT_value4",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "CT_value5",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "CT_value6",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "CT_value7",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "CT_value8",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "fail_count",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_no",
+            "update_date"
+        ]
+    },
+    "tr_smp": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "dt",
+                "type": "NVARCHAR(10) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "dt_hour",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "kw",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "kwh",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "price",
+                "type": "REAL",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "profit",
+                "type": "FLOAT",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "business",
+                "type": "TINYINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "lic_idx",
+                "type": "INTEGER",
+                "nullable": false,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "dt",
+            "dt_hour",
+            "business",
+            "lic_idx"
+        ]
+    },
+    "tr_temp": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "update_date",
+                "type": "DATETIME",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "temp_rs",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "temp_st",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "temp_tr",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "temp_max",
+                "type": "DECIMAL(6, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status0",
+                "type": "NVARCHAR(2) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status1",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status2",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status3",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "fail_count",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_no",
+            "update_date"
+        ]
+    },
+    "tr_weather": {
+        "columns": [
+            {
+                "name": "sl_id",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "item_no",
+                "type": "SMALLINT",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "update_date",
+                "type": "DATETIME",
+                "nullable": false,
+                "default": null
+            },
+            {
+                "name": "s_radiation",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "h_radiation",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "mod_temp",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "out_temp",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "wind_direction",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "wind_speed",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "rainfall",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "humidity",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "ma1",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "ma2",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "out_temp2",
+                "type": "DECIMAL(15, 3)",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status0",
+                "type": "NVARCHAR(2) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status1",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status2",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "status3",
+                "type": "NVARCHAR(64) COLLATE \"Korean_Wansung_CI_AS\"",
+                "nullable": true,
+                "default": null
+            },
+            {
+                "name": "fail_count",
+                "type": "TINYINT",
+                "nullable": true,
+                "default": null
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_no",
+            "update_date"
+        ]
+    }
+}

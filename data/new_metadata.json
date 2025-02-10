@@ -1,0 +1,61 @@
+{
+    "tm_event": {
+        "columns": [
+            "item_code",
+            "event_code",
+            "event_desc"
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_code",
+            "event_code"
+        ],
+        "foreign_keys": []
+    },
+    "th_event": {
+        "columns": [
+            "event_code",
+            "event_date",
+            "end_date"
+        ],
+        "primary_key": [
+            "sl_id",
+            "idx"
+        ],
+        "foreign_keys": []
+    },
+    "tm_user": {
+        "columns": [
+            "site_name",
+            "kwp",
+            "addr"
+        ],
+        "primary_key": [
+            "u_id"
+        ],
+        "foreign_keys": []
+    },
+    "tc_device_list": {
+        "columns": [
+            "item_no",
+            "item_code"
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_no",
+            "port_name",
+            "device_address"
+        ],
+        "foreign_keys": []
+    },
+    "tm_device_item": {
+        "columns": [
+            "device_code"
+        ],
+        "primary_key": [
+            "item_code",
+            "device_code"
+        ],
+        "foreign_keys": []
+    }
+}

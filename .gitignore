@@ -1,0 +1,6 @@
+# 가상환경 
+/main
+app/__pycache__
+
+# Key
+*config.py

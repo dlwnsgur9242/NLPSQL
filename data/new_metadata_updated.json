@@ -1,0 +1,102 @@
+{
+    "tm_event": {
+        "columns": [
+            {
+                "name": "item_code",
+                "description": "장비 코드"
+            },
+            {
+                "name": "event_code",
+                "description": "이벤트 코드"
+            },
+            {
+                "name": "event_desc",
+                "description": "이벤트 설명"
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_code",
+            "event_code"
+        ],
+        "foreign_keys": [],
+        "description": "이벤트 정보"
+    },
+    "th_event": {
+        "columns": [
+            {
+                "name": "event_code",
+                "description": "이벤트 코드"
+            },
+            {
+                "name": "event_date",
+                "description": "이벤트 발생 시간"
+            },
+            {
+                "name": "end_date",
+                "description": "이벤트 종료 시간"
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "idx"
+        ],
+        "foreign_keys": [],
+        "description": "이벤트 1분 히스토리"
+    },
+    "tm_user": {
+        "columns": [
+            {
+                "name": "site_name",
+                "description": "사이트 이름"
+            },
+            {
+                "name": "kwp",
+                "description": "수용 가능한 용량"
+            },
+            {
+                "name": "addr",
+                "description": "주소"
+            }
+        ],
+        "primary_key": [
+            "u_id"
+        ],
+        "foreign_keys": [],
+        "description": "사용자 정보"
+    },
+    "tc_device_list": {
+        "columns": [
+            {
+                "name": "item_no",
+                "description": "장비 등록 번호"
+            },
+            {
+                "name": "item_code",
+                "description": "장비 코드"
+            }
+        ],
+        "primary_key": [
+            "sl_id",
+            "item_no",
+            "port_name",
+            "device_address"
+        ],
+        "foreign_keys": [],
+        "description": "장비 목록"
+    },
+    "tm_device_item": {
+        "columns": [
+            {
+                "name": "device_code",
+                "description": "장비 식별코드"
+            }
+        ],
+        "primary_key": [
+            "item_code",
+            "device_code"
+        ],
+        "foreign_keys": [],
+        "description": "장비 정보"
+    }
+}
