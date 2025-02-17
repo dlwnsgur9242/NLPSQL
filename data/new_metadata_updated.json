@@ -3,100 +3,73 @@
         "columns": [
             {
                 "name": "item_code",
-                "description": "장비 코드"
+                "description": "장비 코드 (예:'CB_INT', 'CB_KDT', 'CB_KeyStone')"
             },
             {
                 "name": "event_code",
-                "description": "이벤트 코드"
+                "description": "이벤트 코드 (예:'CB_INT_CF', 'CB_KDT_CF', 'CB_KeyStone_CF')"
             },
             {
                 "name": "event_desc",
-                "description": "이벤트 설명"
+                "description": "이벤트 설명 (예:'과전압', '과전류', '과부하')"
             }
         ],
-        "primary_key": [
-            "sl_id",
-            "item_code",
-            "event_code"
-        ],
-        "foreign_keys": [],
-        "description": "이벤트 정보"
+        "description": "이벤트 정보로 이상 증상에 관한 테이블"
     },
     "th_event": {
         "columns": [
             {
                 "name": "event_code",
-                "description": "이벤트 코드"
+                "description": "이벤트 코드 (예:'IVHDST'', 'CBDYV10_underA', 'CBDY5100_overA', 'IVHyoSungSTOP')"
             },
             {
                 "name": "event_date",
-                "description": "이벤트 발생 시간"
+                "description": "이벤트 발생 시간 (예:'2024-07-04 14:47:26.503','2024-07-04 14:36:33.147)','2024-07-04 14:25:37.660')"
             },
             {
                 "name": "end_date",
-                "description": "이벤트 종료 시간"
+                "description": "이벤트 종료 시간 (예:'2024-07-04 14:48:01.460','2024-07-04 14:37:07.863','2024-07-04 14:26:12.473')"
             }
         ],
-        "primary_key": [
-            "sl_id",
-            "idx"
-        ],
-        "foreign_keys": [],
-        "description": "이벤트 1분 히스토리"
+        "description": "이벤트 1분 히스토리로 이상 증상에 관한 데이터가 1분마다 업로드."
     },
     "tm_user": {
         "columns": [
             {
                 "name": "site_name",
-                "description": "사이트 이름"
+                "description": "사이트 이름 (예:'새싹햇살1호','천우태양광','코레일대전태양광')"
             },
             {
                 "name": "kwp",
-                "description": "수용 가능한 용량"
+                "description": "수용 가능한 용량 (예:'95.200','2000.000','2356.200')"
             },
             {
                 "name": "addr",
-                "description": "주소"
+                "description": "주소 (예:'충남 당진군 송악면 중흥리 9-1','충남 태안군 고남면 장곡리 377-7','대전 대덕구 평촌동 332')"
             }
         ],
-        "primary_key": [
-            "u_id"
-        ],
-        "foreign_keys": [],
-        "description": "사용자 정보"
+        "description": "사용자 정보로 현장 정보에 관련된 테이블"
     },
     "tc_device_list": {
         "columns": [
             {
                 "name": "item_no",
-                "description": "장비 등록 번호"
+                "description": "장비 등록 번호 (예:'1','2','3')"
             },
             {
                 "name": "item_code",
-                "description": "장비 코드"
+                "description": "장비 코드 (예:'IVWL3P','IVHDL','DMGP22')"
             }
         ],
-        "primary_key": [
-            "sl_id",
-            "item_no",
-            "port_name",
-            "device_address"
-        ],
-        "foreign_keys": [],
         "description": "장비 목록"
     },
     "tm_device_item": {
         "columns": [
             {
                 "name": "device_code",
-                "description": "장비 식별코드"
+                "description": "장비 식별코드 (예:'CB','DM','IV')"
             }
         ],
-        "primary_key": [
-            "item_code",
-            "device_code"
-        ],
-        "foreign_keys": [],
         "description": "장비 정보"
     }
 }
